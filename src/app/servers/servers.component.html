@@ -1,0 +1,21 @@
+<div>
+  <p>ServerId: <input type="number" [(ngModel)]="newServerId" placeholder="Server ID"></p><br>
+ <p>ServerName:<input type="text" [(ngModel)]="newServerName" placeholder="Server Name"></p> <br>
+  <p>ServerStatus:<input type="text" [(ngModel)]="newServerStatus" placeholder="Status"></p> <br>
+  <button (click)="onAddServer()">Add Server</button>
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+</div>
+<hr>
+<div *ngFor="let server of servers">
+  <p [ngStyle]="{  'color': (server.serverId % 2 === 0) ? 'blue' : 'purple'}">Server ID: {{ server.serverId }}</p>
+  <p [ngStyle]="{
+  'font-weight': server.serverStatus === 'online' ? 'bold' : 'normal',
+  }">Name: {{ server.serverName }}</p>
+  <p [ngStyle]="{
+       'font-weight': server.serverStatus === 'online' ? 'bold' : 'normal',
+  'color': (server.serverStatus === 'online') ? ' green' : 'red'
+      }">Status: {{ server.serverStatus}}</p>
+  <hr>
+  <p>{{getServerSummary()}}</p>
+  <hr>
+</div>
