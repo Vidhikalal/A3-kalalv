@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {Server} from "./server";
 import {FormsModule} from "@angular/forms";
 import {NgForOf, NgIf, NgStyle} from "@angular/common";
-
+//By Vidhi Kalal ,991706094
 @Component({
   selector: 'app-servers',
   standalone: true,
@@ -23,7 +23,7 @@ export class ServersComponent {
   newServerId:number=0;
   errorMessage='';
 
-  onAddServer() {
+  onAddServer() {//function for taking user input when user clicks on add server button
   if (this.servers.find(server => server.serverId === this.newServerId)) {
     this.errorMessage = 'Server ID already exists. Please enter a unique ID.';
     return;}
@@ -36,7 +36,7 @@ export class ServersComponent {
     this.errorMessage='';
 
   }
-  getServerSummary(): string {
+  getServerSummary(): string {//function for getting summary of total servers and number of online and offline servers
     const totalServers = this.servers.length;
     const onlineServers = this.servers.filter(server => server.serverStatus === 'online').length;
     const offlineServers = totalServers - onlineServers;

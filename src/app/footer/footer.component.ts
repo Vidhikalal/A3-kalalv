@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {NgClass} from "@angular/common";
-
+//By vidhikalal 991706094
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -13,5 +13,5 @@ import {NgClass} from "@angular/common";
 export class FooterComponent {
   studentName='Vidhi Kalal'
   studentId='991706094'
-
+//string interpolation for studentName and studentId
 }
