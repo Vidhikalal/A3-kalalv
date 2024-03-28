@@ -2,7 +2,7 @@
   <p>ServerId: <input type="number" [(ngModel)]="newServerId" placeholder="Server ID"></p><br>
  <p>ServerName:<input type="text" [(ngModel)]="newServerName" placeholder="Server Name"></p> <br>
   <p>ServerStatus:<input type="text" [(ngModel)]="newServerStatus" placeholder="Status"></p> <br>
-  <button (click)="onAddServer()">Add Server</button>
+  <button (click)="onAddServer()" style="background-color: blue; color: white;">Add Server</button>
   <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
 </div>
 <hr>
