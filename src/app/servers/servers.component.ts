@@ -38,8 +38,8 @@ export class ServersComponent {
   }
   getServerSummary(): string {//function for getting summary of total servers and number of online and offline servers
     const totalServers = this.servers.length;
-    const onlineServers = this.servers.filter(server => server.serverStatus === 'online').length;
-    const offlineServers = totalServers - onlineServers;
+    const onlineServers = this.servers.filter(server => server.serverStatus === 'Online').length;
+    const offlineServers =this.servers.filter(server => server.serverStatus === 'Offline').length;
     return `Total Servers: ${totalServers}\nOnline: ${onlineServers}\nOffline: ${offlineServers}`;
   }
 }

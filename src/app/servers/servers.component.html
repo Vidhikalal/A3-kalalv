@@ -9,11 +9,11 @@
 <div *ngFor="let server of servers">
   <p [ngStyle]="{  'color': (server.serverId % 2 === 0) ? 'blue' : 'purple'}">Server ID: {{ server.serverId }}</p>
   <p [ngStyle]="{
-  'font-weight': server.serverStatus === 'online' ? 'bold' : 'normal',
+  'font-weight': server.serverStatus === 'Online' ? 'bold' : 'normal',
   }">Name: {{ server.serverName }}</p>
   <p [ngStyle]="{
-       'font-weight': server.serverStatus === 'online' ? 'bold' : 'normal',
-  'color': (server.serverStatus === 'online') ? ' green' : 'red'
+       'font-weight': server.serverStatus === 'Online' ? 'bold' : 'normal',
+  'color': (server.serverStatus === 'Online') ? ' green' : 'red'
       }">Status: {{ server.serverStatus}}</p>
   <hr>
   <p>{{getServerSummary()}}</p>
